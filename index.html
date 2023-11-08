@@ -22,7 +22,7 @@
             if (!liff.isLoggedIn()) {
                 liff.login({})
             }
-            const userProfile = liffId.getProfile();
+            const userProfile = liff.getProfile();
             wrapper.textContent = JSON.stringify({
                 OS: liff.getOS(),
                 language: liff.getLanguage(),
