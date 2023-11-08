@@ -38,7 +38,7 @@
                 userProfile
             });
 
-            document.querySelector("#img_wrapper").attr("src", userProfile.pictureUrl);;
+            document.querySelector("#img_wrapper").src = userProfile.pictureUrl;
         }, (err) => console.log(err));
     </script>
 </body>
