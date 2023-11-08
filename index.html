@@ -22,23 +22,23 @@
             if (!liff.isLoggedIn()) {
                 liff.login({})
             }
-            let userProfile = {};
             liff.getProfile().then((profile) => {
-                userProfile = profile;
+                wrapper.textContent = JSON.stringify({
+                    OS: liff.getOS(),
+                    language: liff.getLanguage(),
+                    sdkVersion: liff.getVersion(),
+                    lineVersion: liff.getLineVersion(),
+                    context: liff.getContext(),
+                    isLogin: liff.isLoggedIn(),
+                    accessToken: liff.getAccessToken(),
+                    idToken: liff.getIDToken(),
+                    profile
+                });
+                document.querySelector("#img_wrapper").src = profile.pictureUrl;
             });
-            wrapper.textContent = JSON.stringify({
-                OS: liff.getOS(),
-                language: liff.getLanguage(),
-                sdkVersion: liff.getVersion(),
-                lineVersion: liff.getLineVersion(),
-                context: liff.getContext(),
-                isLogin: liff.isLoggedIn(),
-                accessToken: liff.getAccessToken(),
-                idToken: liff.getIDToken(),
-                userProfile
-            });
+            
 
-            document.querySelector("#img_wrapper").src = userProfile.pictureUrl;
+            
         }, (err) => console.log(err));
     </script>
 </body>
