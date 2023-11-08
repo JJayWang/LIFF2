@@ -10,14 +10,19 @@
 
 <body>
     <div id="wrapper"></div>
+    <img id="img_wrapper" src="">
     <script>
         const wrapper = document.querySelector("#wrapper");
         const liffId = '2001418225-45P9W0Xb';
         // liff.ready.then(() => {
         //     console.log('liff ready');
         // });
-        //liff.login()
+
         liff.init({ liffId }, () => {
+            if (!liff.isLoggedIn()) {
+                liff.login({})
+            }
+            const userProfile = liffId.getProfile();
             wrapper.textContent = JSON.stringify({
                 OS: liff.getOS(),
                 language: liff.getLanguage(),
@@ -26,8 +31,11 @@
                 context: liff.getContext(),
                 isLogin: liff.isLoggedIn(),
                 accessToken: liff.getAccessToken(),
-                idToken: liff.getIDToken()
+                idToken: liff.getIDToken(),
+                userProfile
             });
+
+            document.querySelector("#img_wrapper").attr("src", userProfile.pictureUrl);;
         }, (err) => console.log(err));
     </script>
 </body>
