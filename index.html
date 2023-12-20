@@ -10,11 +10,7 @@
 
 <body>
     <div>
-        <span>URL</span>
-        <input id="url" type="text" value="https://www.fire.taichung.gov.tw/"/>
         <button id="btn">Redirect</button>
-        <hr/>
-        <span>Redirect2 是直接跳轉到隨便的LINE綁定連結</span>
         <button id="btn2">Redirect2</button>
     </div>
     <!-- <div id="wrapper"></div>
@@ -25,11 +21,7 @@
 
         liff.init({ liffId }, () => {
             document.querySelector("#btn").addEventListener("click", () => {
-                const url = document.querySelector("#url").value;
-                if(url !== "") {
-                    console.log(url)
-                    window.location.href = url;
-                }
+                window.location.href = "https://www.fire.taichung.gov.tw/";
             })
 
             document.querySelector("#btn2").addEventListener("click", () => {
