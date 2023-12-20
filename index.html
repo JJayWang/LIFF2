@@ -11,8 +11,9 @@
 <body>
     <div>
         <span>URL</span>
-        <input id="url" type="text" />
-        <button id="btn" value="https://www.fire.taichung.gov.tw/">Redirect</button>
+        <input id="url" type="text" value="https://www.fire.taichung.gov.tw/"/>
+        <button id="btn">Redirect</button>
+        <button id="btn2">Redirect2</button>
     </div>
     <!-- <div id="wrapper"></div>
     <img id="img_wrapper" src=""> -->
@@ -27,6 +28,10 @@
                     console.log(url)
                     window.location.href = url;
                 }
+            })
+
+            document.querySelector("#btn2").addEventListener("click", () => {
+                window.location.href = "https://access.line.me/dialog/bot/accountLink?linkToken=Dd59ALhddego9hg8mAkKxRd5guCC5zm0&nonce=8iPrAzSxgJB1FEQJ0UM7yxdbfiVDXQntPJWUXdnCyQ4%3d";
             })
             // if (!liff.isLoggedIn()) {
             //     liff.login()
