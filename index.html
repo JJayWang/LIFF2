@@ -9,36 +9,45 @@
 </head>
 
 <body>
-    <div id="wrapper"></div>
-    <img id="img_wrapper" src="">
+    <div>
+        <span>URL</span>
+        <input id="url" type="text" />
+        <button id="btn">Redirect</button>
+    </div>
+    <!-- <div id="wrapper"></div>
+    <img id="img_wrapper" src=""> -->
     <script>
-        const wrapper = document.querySelector("#wrapper");
-        const liffId = '2001418225-kvByJmEr';
-        // liff.ready.then(() => {
-        //     console.log('liff ready');
-        // });
+        // const wrapper = document.querySelector("#wrapper");
+        const liffId = '2001418225-xJjL4bkv';
 
         liff.init({ liffId }, () => {
-            if (!liff.isLoggedIn()) {
-                liff.login({})
-            }
-            liff.getProfile().then((profile) => {
-                wrapper.textContent = JSON.stringify({
-                    OS: liff.getOS(),
-                    language: liff.getLanguage(),
-                    sdkVersion: liff.getVersion(),
-                    lineVersion: liff.getLineVersion(),
-                    context: liff.getContext(),
-                    isLogin: liff.isLoggedIn(),
-                    accessToken: liff.getAccessToken(),
-                    idToken: liff.getIDToken(),
-                    profile
-                });
-                document.querySelector("#img_wrapper").src = profile.pictureUrl;
-            });
-            
+            document.querySelector("#btn").addEventListener("click", () => {
+                const url = document.querySelector("#url").value;
+                if(url !== "") {
+                    console.log(url)
+                    window.location.href = url;
+                }
+            })
+            // if (!liff.isLoggedIn()) {
+            //     liff.login()
+            // }
+            // let userProfile = {};
+            // liff.getProfile().then((profile) => {
+            //     userProfile = profile;
+            // });
+            // wrapper.textContent = JSON.stringify({
+            //     OS: liff.getOS(),
+            //     language: liff.getLanguage(),
+            //     sdkVersion: liff.getVersion(),
+            //     lineVersion: liff.getLineVersion(),
+            //     context: liff.getContext(),
+            //     isLogin: liff.isLoggedIn(),
+            //     accessToken: liff.getAccessToken(),
+            //     idToken: liff.getIDToken(),
+            //     userProfile
+            // });
 
-            
+            // document.querySelector("#img_wrapper").attr("src", userProfile.pictureUrl);;
         }, (err) => console.log(err));
     </script>
 </body>
