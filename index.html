@@ -14,12 +14,8 @@
         <button id="btn2">Redirect2</button>
         Update
     </div>
-    <!-- <div id="wrapper"></div>
-    <img id="img_wrapper" src=""> -->
     <script>
-        // const wrapper = document.querySelector("#wrapper");
         const liffId = '2001418225-xJjL4bkv';
-
         liff.init({ liffId }, () => {
             document.querySelector("#btn").addEventListener("click", () => {
                 window.location.href = "https://www.fire.taichung.gov.tw/";
@@ -28,26 +24,6 @@
             document.querySelector("#btn2").addEventListener("click", () => {
                 window.location.href = "https://access.line.me/dialog/bot/accountLink?linkToken=0W5cyoiQtAuN7EmDQJlvroF7ehAczNih&nonce=wka4w9EyD5FIU6fYVUkSYHTuFFdDL2nYN96X32pReBE%3d";
             })
-            // if (!liff.isLoggedIn()) {
-            //     liff.login()
-            // }
-            // let userProfile = {};
-            // liff.getProfile().then((profile) => {
-            //     userProfile = profile;
-            // });
-            // wrapper.textContent = JSON.stringify({
-            //     OS: liff.getOS(),
-            //     language: liff.getLanguage(),
-            //     sdkVersion: liff.getVersion(),
-            //     lineVersion: liff.getLineVersion(),
-            //     context: liff.getContext(),
-            //     isLogin: liff.isLoggedIn(),
-            //     accessToken: liff.getAccessToken(),
-            //     idToken: liff.getIDToken(),
-            //     userProfile
-            // });
-
-            // document.querySelector("#img_wrapper").attr("src", userProfile.pictureUrl);;
         }, (err) => console.log(err));
     </script>
 </body>
