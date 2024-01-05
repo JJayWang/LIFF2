@@ -12,7 +12,7 @@
     <div>
         <button id="btn">Redirect</button>
         <button id="btn2">Redirect2</button>
-        Update
+        Update333
     </div>
     <script>
         const liffId = '2001418225-xJjL4bkv';
@@ -22,6 +22,7 @@
             })
 
             document.querySelector("#btn2").addEventListener("click", () => {
+                liff.logout();
                 window.location.href = "https://access.line.me/dialog/bot/accountLink?linkToken=0W5cyoiQtAuN7EmDQJlvroF7ehAczNih&nonce=wka4w9EyD5FIU6fYVUkSYHTuFFdDL2nYN96X32pReBE%3d";
             })
         }, (err) => console.log(err));
