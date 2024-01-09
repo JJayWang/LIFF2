@@ -12,13 +12,21 @@
     <div>
         <button id="btn">Redirect</button>
         <button id="btn2">Redirect2</button>
-        Update333
+        Update333555
     </div>
     <script>
         const liffId = '2001418225-xJjL4bkv';
         liff.init({ liffId }, () => {
             document.querySelector("#btn").addEventListener("click", () => {
-                window.location.href = "https://www.fire.taichung.gov.tw/";
+                // window.location.href = "https://www.fire.taichung.gov.tw/";
+                liff
+                  .scanCodeV2()
+                  .then((result) => {
+                    console.log(result);
+                  })
+                  .catch((error) => {
+                    console.log("error", error);
+                  });
             })
 
             document.querySelector("#btn2").addEventListener("click", () => {
