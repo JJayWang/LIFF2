@@ -14,28 +14,28 @@
         <button id="btn2">Redirect2</button>
         <button id="btn3">Btn</button>
         
-        <!-- 開啟 前鏡頭 錄影、拍照 -->
+        <!-- 開啟 前鏡頭 錄影、拍照 
         <input type="file" capture="user" accept="video/*"/>
-        <input type="file" capture="user" accept="image/*"/>
+        <input type="file" capture="user" accept="image/*"/>-->
         
-        <!-- 開啟 後鏡頭 錄影、拍照 -->
+        <!-- 開啟 後鏡頭 錄影、拍照 
         <input type="file" capture="environment" accept="video/*"/>
-        <input type="file" capture="environment" accept="image/*"/>
-        Update77777
+        <input type="file" capture="environment" accept="image/*"/>-->
+        Update888
     </div>
     <script>
         const liffId = '2001418225-xJjL4bkv';
-        liff.init({ liffId }, () => {
+        liff.init({ liffId, withLoginOnExternalBrowser: true, }, () => {
             document.querySelector("#btn").addEventListener("click", () => {
-                // window.location.href = "https://www.fire.taichung.gov.tw/";
-                liff
+                window.location.href = "https://www.fire.taichung.gov.tw/";
+                /*liff
                   .scanCodeV2()
                   .then((result) => {
                     console.log(result);
                   })
                   .catch((error) => {
                     console.log("error", error);
-                  });
+                  });*/
             })
 
             document.querySelector("#btn2").addEventListener("click", () => {
