@@ -9,33 +9,11 @@
 </head>
 
 <body>
-    <div id="wrapper"></div>
-    <img id="img_wrapper" src="">
     <script>
-        const wrapper = document.querySelector("#wrapper");
-        const liffId = '2001418225-45P9W0Xb';
-        // liff.ready.then(() => {
-        //     console.log('liff ready');
-        // });
-
-        liff.init({ liffId }, () => {
-            if (!liff.isLoggedIn()) {
-                liff.login({})
-            }
-            const userProfile = liffId.getProfile();
-            wrapper.textContent = JSON.stringify({
-                OS: liff.getOS(),
-                language: liff.getLanguage(),
-                sdkVersion: liff.getVersion(),
-                lineVersion: liff.getLineVersion(),
-                context: liff.getContext(),
-                isLogin: liff.isLoggedIn(),
-                accessToken: liff.getAccessToken(),
-                idToken: liff.getIDToken(),
-                userProfile
-            });
-
-            document.querySelector("#img_wrapper").attr("src", userProfile.pictureUrl);;
+        const liffId = '2003199329-jqKW4WaQ';
+        
+        liff.init({ liffId, withLoginOnExternalBrowser: true }, () => {
+            console.log(liff);
         }, (err) => console.log(err));
     </script>
 </body>
