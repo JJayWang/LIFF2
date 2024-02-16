@@ -9,7 +9,8 @@
 </head>
 
 <body>
-    <h1>CheckSum 1258</h1>
+    <butto id="btn1">Init</butto>
+    <h1>CheckSum 1259</h1>
     <h1 id="h11"></h1>
     <input id="i11" value="Hello" />
     <script>
@@ -18,11 +19,14 @@
         i11.value = window.location.href;
         i11.focus();
         i11.select();
+
+        document.querySelector("#btn1").addEventListener("click", () => {
+            const liffId = '2001418225-kvByJmEr';
+            liff.init({ liffId, withLoginOnExternalBrowser: true }, () => {
+                console.log(liff);
+            }, (err) => console.log(err));
+        });
         
-        const liffId = '2001418225-kvByJmEr';
-        liff.init({ liffId, withLoginOnExternalBrowser: true }, () => {
-            console.log(liff);
-        }, (err) => console.log(err));
     </script>
 </body>
 
