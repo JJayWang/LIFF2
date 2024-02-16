@@ -14,7 +14,15 @@
     <input id="i11" value="Hello" />
     <script>
         document.querySelector("#h11").textContent = window.location.href;
-        document.querySelector("#i11").value = window.location.href;
+        const i11 = document.querySelector("#i11");
+        i11.value = window.location.href;
+        i11.focus();
+        i11.select();
+        
+        const liffId = '2003199329-jqKW4WaQ';
+        liff.init({ liffId, withLoginOnExternalBrowser: true }, () => {
+            console.log(liff);
+        }, (err) => console.log(err));
     </script>
 </body>
 
