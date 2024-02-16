@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <h1>CheckSum 1256</h1>
+    <h1>CheckSum 1257</h1>
     <h1 id="h11"></h1>
     <input id="i11" value="Hello" />
     <script>
@@ -20,7 +20,7 @@
         i11.select();
         
         const liffId = '2003199329-jqKW4WaQ';
-        liff.init({ liffId }, () => {
+        liff.init({ liffId, withLoginOnExternalBrowser: true }, () => {
             console.log(liff);
         }, (err) => console.log(err));
     </script>
