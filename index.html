@@ -10,7 +10,7 @@
 
 <body>
     <butto id="btn1">Init</butto>
-    <h1>CheckSum 1262</h1>
+    <h1>CheckSum 1263</h1>
     <h1 id="h11"></h1>
     <input id="i11" value="Hello" />
     <script>
@@ -22,6 +22,7 @@
 
         const liffId = '2001418225-kvByJmEr';
         liff.init({ liffId, withLoginOnExternalBrowser: true }, () => {
+            window.alert("This is alert");
             console.log(liff);
         }, (err) => console.log(err));
         
