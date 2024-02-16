@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
-    <title>JJ LIFF</title>
+    <title>LIFF 1</title>
 </head>
 
 <body>
@@ -20,12 +20,10 @@
         i11.focus();
         i11.select();
 
-        document.querySelector("#btn1").addEventListener("click", () => {
-            const liffId = '2001418225-kvByJmEr';
-            liff.init({ liffId, withLoginOnExternalBrowser: true }, () => {
-                console.log(liff);
-            }, (err) => console.log(err));
-        });
+        const liffId = '2001418225-kvByJmEr';
+        liff.init({ liffId, withLoginOnExternalBrowser: true }, () => {
+            console.log(liff);
+        }, (err) => console.log(err));
         
     </script>
 </body>
